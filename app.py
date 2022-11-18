@@ -48,9 +48,9 @@ def api_attractions():
 		if keyword:
 			mykeyword = '%' + keyword + '%'
 			sql = "SELECT * FROM attraction WHERE category = %s OR name LIKE %s LIMIT %s, %s"
-			params = (mykeyword, mykeyword, offset, default_num_record)
+			params = (keyword, mykeyword, offset, default_num_record)
 			# -- next page
-			next_page_params = (mykeyword, mykeyword, next_page_offset, default_num_record)
+			next_page_params = (keyword, mykeyword, next_page_offset, default_num_record)
 		else:
 			sql = "SELECT * FROM attraction LIMIT %s, %s"
 			params = (offset, default_num_record)
