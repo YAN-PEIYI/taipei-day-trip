@@ -101,7 +101,7 @@ def api_attraction(attractionId):
 		params = (str(attractionId), )
 		cursor.execute(sql, params)
 		myresult = cursor.fetchone()
-		print (myresult)
+		# print (myresult)
 		if myresult:
 			attraction = {
 				"id": myresult[0],
