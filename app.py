@@ -152,4 +152,4 @@ def api_categories():
 			"message": "伺服器內部錯誤"
 		}, 500	
 
-app.run(port=3000, debug=True)
+app.run(port=3000)
