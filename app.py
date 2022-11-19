@@ -73,7 +73,7 @@ def api_attractions():
 				"mrt": x[6],
 				"lat": x[7],
 				"lng": x[8],
-				"images": x[9]
+				"images": json.loads(x[9])
 			}	
 			attractions.append(attraction)
 		
@@ -113,7 +113,7 @@ def api_attraction(attractionId):
 				"mrt": myresult[6],
 				"lat": myresult[7],
 				"lng": myresult[8],
-				"images": myresult[9]
+				"images": json.loads(myresult[9])
 			}
 			result = {
 				'data': attraction
